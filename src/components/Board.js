@@ -1,9 +1,11 @@
 import React from 'react'
 import { Square } from 'components/Square'
+import { useSelector } from 'react-redux'
 
 export const Board = () => {
+  const squares = useSelector((store) => (store.game.squares))
   // TODO - use the 'squares' state from the game reducer
-  const squares = []
+  
 
   return (
     <div className="board">
